@@ -41,9 +41,13 @@
     combos {
         compatible = "zmk,combos";
 
-        Caps_Lock {
+        capswords {
             bindings = <&caps_word>;
             key-positions = <23 12>;
+        };
+        caps_lock {
+            bindings = <&kp CAPS>;
+            key-positions = <24 35>;
         };
 
         left_par {
@@ -94,8 +98,8 @@
             timeout-ms = <100>;
         };
 
-        tilde {
-            bindings = <&kp TILDE>;
+        slash {
+            bindings = <&kp SLASH>;
             key-positions = <29 30>;
         };
 
@@ -108,7 +112,17 @@
             bindings = <&kp GREATER_THAN>;
             key-positions = <8 9>;
         };
-        
+
+        SQ {
+            bindings = <&kp SINGLE_QUOTE>;
+            key-positions = <14 15>;
+        };
+
+        DQ {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <21 20>;
+        };
+
     };
 
     keymap {
