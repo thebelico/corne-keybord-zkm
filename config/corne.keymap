@@ -41,56 +41,75 @@
     combos {
         compatible = "zmk,combos";
 
-        left_bkt {
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <4 3>;
-            timeout-ms = <50>;
-        };
-
-        right_bkt {
-            bindings = <&kp RBKT>;
-            key-positions = <7 8>;
-            timeout-ms = <50>;
-        };
-
-        left_par {
-            bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <15 16>;
-            timeout-ms = <50>;
-        };
-
-        right_par {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <19 20>;
-            timeout-ms = <50>;
-        };
-
-        left_brace {
-            bindings = <&kp LEFT_BRACE>;
-            key-positions = <27 28>;
-            timeout-ms = <50>;
-        };
-
-        right_brace {
-            bindings = <&kp RIGHT_BRACE>;
-            key-positions = <32 31>;
-            timeout-ms = <50>;
-        };
-
-        bac {
-            bindings = <&kp BACKSLASH>;
-            key-positions = <5 6>;
-        };
-
-        pipe {
-            bindings = <&kp PIPE>;
-            key-positions = <17 18>;
-        };
-
         Caps_Lock {
             bindings = <&caps_word>;
             key-positions = <23 12>;
         };
+
+        left_par {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <3 4>;
+            timeout-ms = < 100>;
+        };
+
+        right_par {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <7 8>;
+            timeout-ms = <100>;
+        };
+
+        left_brace {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <15 16>;
+            timeout-ms = <100>;
+        };
+
+        right_brace {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <19 20>;
+            timeout-ms = <100>;
+        };
+
+        left_bkt {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <27 28>;
+            timeout-ms = <100>;
+        };
+
+        right_bkt {
+            bindings = <&kp RBKT>;
+            key-positions = <31 32>;
+            timeout-ms = <100>;
+        };
+
+        pipe {
+            bindings = <&kp PIPE>;
+            key-positions = <5 6>;
+            timeout-ms = <100>;
+        };
+
+        bac {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <17 18>;
+            timeout-ms = <100>;
+        };
+
+        tilde {
+            bindings = <&kp TILDE>;
+            key-positions = <29 30>;
+        };
+
+        less_than {
+            bindings = <&kp LESS_THAN>;
+            key-positions = <3 2>;
+        };
+
+        greater_than {
+            bindings = <&kp GREATER_THAN>;
+            key-positions = <8 9>;
+        };
+
+        
     };
 
     keymap {
@@ -134,24 +153,20 @@
 
         Bluetooth {
             bindings = <
-&bt BT_NXT  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans        &trans      &trans       &trans  &trans  &trans  &bt BT_CLR_ALL
-&bt BT_PRV  &trans        &trans        &trans        &trans        &trans        &trans      &trans       &trans  &trans  &trans  &trans
-&bt BT_CLR  &trans        &trans        &trans        &bootloader   &sys_reset    &sys_reset  &bootloader  &trans  &trans  &trans  &trans
-                                        &trans        &trans        &trans        &trans      &trans       &trans
+&bt BT_NXT  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans      &trans       &trans  &trans  &trans  &bt BT_CLR_ALL
+&bt BT_PRV  &trans        &trans        &trans        &trans        &trans          &trans      &trans       &trans  &trans  &trans  &trans
+&bt BT_CLR  &trans        &trans        &trans        &bootloader   &sys_reset      &sys_reset  &bootloader  &trans  &trans  &trans  &trans
+                                        &trans        &trans        &trans          &trans      &trans       &trans
             >;
         };
 
         RGB-Custom {
             bindings = <
-&rgb_ug RGB_COLOR_HSB(0,100,50)  &rgb_ug RGB_COLOR_HSB(32,100,50)  &rgb_ug RGB_COLOR_HSB(60,90,70)   &rgb_ug RGB_COLOR_HSB(90,80,40)   &rgb_ug RGB_COLOR_HSB(120,70,50)   &rgb_ug RGB_COLOR_HSB(150,60,70)     &rgb_ug RGB_COLOR_HSB(180,90,50)   &rgb_ug RGB_COLOR_HSB(210,80,60)   &rgb_ug RGB_COLOR_HSB(240,70,40)  &rgb_ug RGB_COLOR_HSB(270,80,50)   &rgb_ug RGB_COLOR_HSB(300,70,60)  &rgb_ug RGB_COLOR_HSB(330,90,70)
-&rgb_ug RGB_COLOR_HSB(0,60,30)   &rgb_ug RGB_COLOR_HSB(30,50,40)   &rgb_ug RGB_COLOR_HSB(60,70,50)   &rgb_ug RGB_COLOR_HSB(90,60,30)   &rgb_ug RGB_COLOR_HSB(120,50,40)   &rgb_ug RGB_COLOR_HSB(150,70,50)     &rgb_ug RGB_COLOR_HSB(180,60,30)   &rgb_ug RGB_COLOR_HSB(210,50,40)   &rgb_ug RGB_COLOR_HSB(240,70,50)  &rgb_ug RGB_COLOR_HSB(270,60,30)   &rgb_ug RGB_COLOR_HSB(300,50,40)  &rgb_ug RGB_COLOR_HSB(330,70,50)
-&rgb_ug RGB_COLOR_HSB(0,100,50)  &rgb_ug RGB_COLOR_HSB(41,100,50)  &rgb_ug RGB_COLOR_HSB(57,100,50)  &rgb_ug RGB_COLOR_HSB(90,100,50)  &rgb_ug RGB_COLOR_HSB(120,100,29)  &rgb_ug RGB_COLOR_HSB(150,100,50)    &rgb_ug RGB_COLOR_HSB(180,100,64)  &rgb_ug RGB_COLOR_HSB(210,100,50)  &rgb_ug RGB_COLOR_HSB(240,94,32)  &rgb_ug RGB_COLOR_HSB(270,100,50)  &rgb_ug RGB_COLOR_HSB(300,78,20)  &rgb_ug RGB_COLOR_HSB(330,100,75)
-                                                                                                     &trans                            &trans                             &tog 5                               &trans                             &trans                             &trans
+&rgb_ug RGB_COLOR_HSB(0,79,61)   &rgb_ug RGB_COLOR_HSB(30,67,58)   &rgb_ug RGB_COLOR_HSB(60,73,65)   &rgb_ug RGB_COLOR_HSB(90,86,62)   &rgb_ug RGB_COLOR_HSB(120,74,59)   &rgb_ug RGB_COLOR_HSB(150,67,57)     &rgb_ug RGB_COLOR_HSB(180,72,60)   &rgb_ug RGB_COLOR_HSB(210,82,61)   &rgb_ug RGB_COLOR_HSB(240,88,62)   &rgb_ug RGB_COLOR_HSB(270,88,63)   &rgb_ug RGB_COLOR_HSB(300,62,78)   &rgb_ug RGB_COLOR_HSB(330,78,70)
+&rgb_ug RGB_COLOR_HSB(0,100,50)  &rgb_ug RGB_COLOR_HSB(30,100,50)  &rgb_ug RGB_COLOR_HSB(60,100,50)  &rgb_ug RGB_COLOR_HSB(90,100,50)  &rgb_ug RGB_COLOR_HSB(120,100,50)  &rgb_ug RGB_COLOR_HSB(150,100,50)    &rgb_ug RGB_COLOR_HSB(180,100,50)  &rgb_ug RGB_COLOR_HSB(210,100,50)  &rgb_ug RGB_COLOR_HSB(240,100,50)  &rgb_ug RGB_COLOR_HSB(270,100,50)  &rgb_ug RGB_COLOR_HSB(300,100,50)  &rgb_ug RGB_COLOR_HSB(330,100,50)
+&rgb_ug RGB_COLOR_HSB(0,60,37)   &rgb_ug RGB_COLOR_HSB(30,80,33)   &rgb_ug RGB_COLOR_HSB(60,68,30)   &rgb_ug RGB_COLOR_HSB(90,69,33)   &rgb_ug RGB_COLOR_HSB(120,70,26)   &rgb_ug RGB_COLOR_HSB(150,64,35)     &rgb_ug RGB_COLOR_HSB(180,57,38)   &rgb_ug RGB_COLOR_HSB(210,73,35)   &rgb_ug RGB_COLOR_HSB(240,61,31)   &rgb_ug RGB_COLOR_HSB(270,48,27)   &rgb_ug RGB_COLOR_HSB(300,52,33)   &rgb_ug RGB_COLOR_HSB(330,78,27)
+                                                                                                     &none                             &none                              &tog 5                               &none                              &none                              &none
             >;
         };
-
-        extra3 { status = "reserved"; };
-
-        extra4 { status = "reserved"; };
     };
 };
